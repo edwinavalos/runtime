@@ -232,6 +232,7 @@ func New(host, basePath string, schemes []string) *Runtime {
 		runtime.TextMime:    runtime.TextConsumer(),
 		runtime.HTMLMime:    runtime.TextConsumer(),
 		runtime.CSVMime:     runtime.CSVConsumer(),
+		runtime.GZipMime:    runtime.GZipConsumer(),
 		runtime.DefaultMime: runtime.ByteStreamConsumer(),
 	}
 	rt.Producers = map[string]runtime.Producer{
